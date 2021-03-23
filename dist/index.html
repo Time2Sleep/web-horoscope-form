@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Гадалкин дом | Редактирование</title>
+</head>
+<body>
+    
+    <header class="header">
+            <div class="header__logo">
+                <img src="assets/img/logo.png" alt="" class="header__img">
+            </div>
+            
+            <nav class="nav header__nav">
+                <a href="#" class="nav__link nav__link-active">Гороскопы</a>
+                <a href="#" class="nav__link">Лунный</a>
+                <a href="#" class="nav__link">Совместимость</a>
+            </nav>
+    </header>
+    
+    <main class="main">
+        
+        <div class="main__content horoscope main__content-active">
+            <div class="horoscope__nav">                
+                <a href="#" class="horoscope__link horoscope__link-active">День</a>
+                <a href="#" class="horoscope__link">Неделя</a>
+                <a href="#" class="horoscope__link">Месяц</a>
+            </div>
+            
+            <div class="horoscope__content horoscope__content-active">
+                ТАБЛИЦА ДНЕЙ
+                <table class="table" border="1" width="100%">
+                   <tr class="table__row">
+                    <td class="table__date">23.03.2021</td>
+                    <td class="table__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam reprehenderit ratione, distinctio eaque illum odio nesciunt voluptas architecto libero velit fugit quas alias eveniet voluptatum maxime praesentium! Aperiam placeat at magnam, perspiciatis voluptas blanditiis quos perferendis eveniet accusantium eius aliquam voluptates dolore molestiae, inventore ipsum, quis earum error. Molestiae nam blanditiis officia, dignissimos iusto ex eveniet aliquam est maiores dolorem quaerat nulla quo vel possimus harum neque quis veritatis ullam ad rerum, suscipit hic. Harum ducimus totam, eveniet vel veritatis eaque ipsum. Enim quae mollitia ut sequi, veritatis laboriosam repellendus consequatur expedita dicta facilis inventore veniam possimus quasi tempora voluptatibus.</td>
+                    <td class="table__edit"><a href="#">Edit</a></td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__date">22.03.2021</td>
+                    <td class="table__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam reprehenderit ratione, distinctio eaque illum odio nesciunt voluptas architecto libero velit fugit quas alias eveniet voluptatum maxime praesentium! Aperiam placeat at magnam, perspiciatis voluptas blanditiis quos perferendis eveniet accusantium eius aliquam voluptates dolore molestiae, inventore ipsum, quis earum error. Molestiae nam blanditiis officia, dignissimos iusto ex eveniet aliquam est maiores dolorem quaerat nulla quo vel possimus harum neque quis veritatis ullam ad rerum, suscipit hic. Harum ducimus totam, eveniet vel veritatis eaque ipsum. Enim quae mollitia ut sequi, veritatis laboriosam repellendus consequatur expedita dicta facilis inventore veniam possimus quasi tempora voluptatibus.</td>
+                    <td class="table__edit"><a href="#">Edit</a></td>
+                  </tr>
+                </table>
+            </div>
+            
+            <div class="horoscope__content">
+                ТАБЛИЦА НЕДЕЛЬ
+            </div>
+            
+            <div class="horoscope__content">
+                ТАБЛИЦА МЕСЯЦЕВ
+            </div>
+        </div>
+        
+        <div class="main__content moon">
+            <div class="moon__content">
+               ТАБЛИЦА ДНЕЙ ДЛЯ ЛУННОГО ГОРОСКОПА
+            </div>
+        </div>
+        
+        <div class="main__content love" method="post">
+           <form action="#" class="love__form">
+               <select class="love__select" name="firstSign" id="firstSign">
+                <option value="0">Овен</option>
+                <option value="1">Телец</option>
+                <option value="2">Близнецы</option>
+                <option value="3">Рак</option>
+                <option value="4">Лев</option>
+                <option value="5">Дева</option>
+                <option value="6">Весы</option>
+                <option value="7">Скорпион</option>
+                <option value="8">Стрелец</option>
+                <option value="9">Козерог</option>
+                <option value="10">Водолей</option>
+                <option value="11">Рыбы</option>
+            </select>
+            <select class="love__select" name="secondSign" id="secondSign">
+                <option value="0">Овен</option>
+                <option value="1">Телец</option>
+                <option value="2">Близнецы</option>
+                <option value="3">Рак</option>
+                <option value="4">Лев</option>
+                <option value="5">Дева</option>
+                <option value="6">Весы</option>
+                <option value="7">Скорпион</option>
+                <option value="8">Стрелец</option>
+                <option value="9">Козерог</option>
+                <option value="10">Водолей</option>
+                <option value="11">Рыбы</option>
+            </select>
+            <div class="love__content">
+                <div class="love__love">
+                   <div class="love__slider slider">
+                       <label class="slider__label" for="loveLevel">Любовь</label><br>
+                        <input class="slider__range" type="range" id="loveLevel" name="slider__love" min="0" max="100" oninput="syncRangeSliders()">
+                        <output class="slider__label" id="loveLevel-text">50%</output>
+                   </div>  
+                   <textarea class="love__textarea" name="love__textarea" id="loveDescription" cols="30" rows="10" placeholder="ЛЮБОВЬ"></textarea>                  
+                </div>
+                <div class="love__friendship">
+                    <div class="love__slider slider">
+                       <label class="slider__label" for="friendshipLevel">Дружба</label><br>
+                        <input class="slider__range" type="range" id="friendshipLevel" name="slider__love" min="0" max="100" oninput="syncRangeSliders()">
+                        <output class="slider__label" id="friendshipLevel-text">50%</output>
+                   </div>   
+                   <textarea class="love__textarea" name="love__textarea" id="friendshipDescription" cols="30" rows="10" placeholder="ДРУЖБА"></textarea>    
+                </div>
+                <div class="love__marriage">
+                    <div class="love__slider slider">
+                       <label class="slider__label" for="marriageLevel">Брак</label><br>
+                        <input class="slider__range" type="range" id="marriageLevel" name="slider__love" min="0" max="100" oninput="syncRangeSliders()">
+                        <output class="slider__label" id="marriageLevel-text">50%</output>
+                   </div>  
+                   <textarea class="love__textarea" name="love__textarea" id="marriageDescription" cols="30" rows="10" placeholder="ЖВАЧКА"></textarea>     
+                </div>
+                
+            </div>
+            
+            <input class="btn" type="submit" value="Сохранить" onclick="alert('Check')">
+           </form>   
+            
+        </div>
+        
+    </main>
+    
+    <script src="assets/js/rem.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+</body>
+</html>

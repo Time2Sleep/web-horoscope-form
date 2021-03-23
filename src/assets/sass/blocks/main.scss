@@ -1,0 +1,46 @@
+.main{
+    padding: 50rem 100rem;
+    
+    &__content{
+        display: none;
+        
+        &-active{
+            display: block;
+        }
+    }
+}
+
+.btn{
+    background: #242F4B;
+    width: 200rem;
+    height: 70rem;
+    
+    font-size: 32rem;
+    color: white;
+    
+    border-radius: 10rem;
+    border: 0;
+}
+
+.table{
+    border-spacing: 0;
+   
+    &__date{
+        padding: 10rem;
+        width: 200rem;
+        text-align: center;
+    }
+    
+    &__text{
+        height: 70rem;
+        display: block;
+        overflow: hidden;
+        padding: 10rem;
+        border-right: 0;
+    }
+    
+    &__edit{
+        border-left: 0;
+        width: 50rem;
+    }
+}
