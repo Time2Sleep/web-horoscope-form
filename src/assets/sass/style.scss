@@ -13,4 +13,14 @@ body {
 @import "blocks/header";
 @import "blocks/main";
 @import "blocks/horoscope";
+@import "blocks/edit";
+
+
+.display_block{
+    display: block;
+}
+
+.display_none{
+    display: none;
+}
 

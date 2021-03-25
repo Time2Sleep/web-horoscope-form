@@ -20,31 +20,6 @@ function changeTab(id){
     contents[id].classList.add("main__content-active");
 }
 
-let horoscopeLinks = document.querySelectorAll('.horoscope__link');
-let horoscopeContents = document.querySelectorAll('.horoscope__content');
-
-horoscopeLinks.forEach(function callback(link, index) {
-    link.addEventListener('click', function(){
-       changeHoroscopeTab(index); 
-    });
-});
-
-function changeHoroscopeTab(id){
-    horoscopeLinks.forEach(function callback(link, index){
-        link.classList.remove("horoscope__link-active");
-    });
-    horoscopeContents.forEach(function callback(content, index){
-        content.classList.remove("horoscope__content-active");
-    });
-    
-    horoscopeLinks[id].classList.add("horoscope__link-active");
-    horoscopeContents[id].classList.add("horoscope__content-active");
-}
-
-
-
-
-
 
 function syncRangeSliders(){
     let loveLevel = document.getElementById("loveLevel").value;
@@ -55,7 +30,12 @@ function syncRangeSliders(){
     
     let marLevel = document.getElementById("marriageLevel").value;
     document.getElementById("marriageLevel-text").value = marLevel+"%";
+    
+    let compatLevel = document.getElementById("compatLevel").value;
+    document.getElementById("compatLevel-text").value = compatLevel+"%";
 }
+
+
 
 
 

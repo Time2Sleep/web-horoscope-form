@@ -63,6 +63,7 @@ body {
 }
 
 .btn {
+    cursor: pointer;
     background: #242F4B;
     width: 200rem;
     height: 70rem;
@@ -70,10 +71,31 @@ body {
     color: white;
     border-radius: 10rem;
     border: 0;
+    transition: background 0.1s linear;
+}
+
+.btn-grey {
+    background: #c1c1c1;
+}
+
+.btn-a {
+    display: inline-block;
+    line-height: 70rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #8D4E1F;
 }
 
 .table {
     border-spacing: 0;
+    border-color: #fff;
+}
+
+.table__row:nth-child(2n) {
+    background: #f0f0f0;
 }
 
 .table__date {
@@ -85,6 +107,7 @@ body {
 .table__text {
     height: 70rem;
     display: block;
+    line-height: 45rem;
     overflow: hidden;
     padding: 10rem;
     border-right: 0;
@@ -93,6 +116,12 @@ body {
 .table__edit {
     border-left: 0;
     width: 50rem;
+}
+
+.add__horoscope {
+    position: absolute;
+    bottom: 50rem;
+    left: 50rem;
 }
 
 .horoscope__nav {
@@ -116,8 +145,6 @@ body {
 .horoscope__content {
     display: none;
     width: 100%;
-    height: 500rem;
-    background-color: #f4f4f4;
 }
 
 .horoscope__content-active {
@@ -126,8 +153,6 @@ body {
 
 .moon__content {
     width: 100%;
-    height: 500rem;
-    background-color: #f4f4f4;
 }
 
 .love__select {
@@ -157,4 +182,49 @@ body {
 .slider__direct {
     padding: 10rem;
     width: 60rem;
+}
+
+.edit {
+    display: none;
+}
+
+.edit__format {
+    padding: 5rem;
+    margin-bottom: 25rem;
+}
+
+.edit__format-day {
+    display: none;
+    padding: 5rem;
+}
+
+.edit__format-week {
+    display: none;
+    padding: 5rem;
+}
+
+.edit__format-month {
+    display: none;
+    padding: 5rem;
+}
+
+.edit__sign {
+    padding: 5rem;
+    margin-bottom: 25rem;
+}
+
+.edit__textarea {
+    margin-bottom: 25rem;
+    padding: 5rem;
+    width: 400rem;
+    height: 500rem;
+    resize: none;
+}
+
+.display_block {
+    display: block;
+}
+
+.display_none {
+    display: none;
 }

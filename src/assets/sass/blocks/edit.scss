@@ -1,0 +1,36 @@
+.edit{
+    display: none;
+    
+    &__format{
+        padding: 5rem;
+        margin-bottom: 25rem;
+        
+        &-day{
+            display: none;
+            padding: 5rem;
+        }
+        
+        &-week{
+            display: none;
+            padding: 5rem;
+        }
+        
+        &-month{
+            display: none;
+            padding: 5rem;
+        }
+    }
+    
+    &__sign{
+        padding: 5rem;
+        margin-bottom: 25rem;
+    }
+    
+    &__textarea{
+        margin-bottom: 25rem;
+        padding: 5rem;
+        width: 400rem;
+        height: 500rem;
+        resize: none;
+    }
+}
