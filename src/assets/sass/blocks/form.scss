@@ -1,0 +1,31 @@
+.love{
+    font-size: 24rem;
+}
+
+
+.form{
+    width: 1500rem;
+    
+    
+    &__section{
+        width: 15%;
+        margin: 10rem;
+        
+        & textarea{
+            resize: none;
+            width: 100%;
+            height: 200rem;
+        }
+    }
+    
+    &__areas{
+        display: flex;
+    flex-wrap: wrap;
+    }
+}
+
+.edit{
+    &__date{
+        font-size: 32rem;
+    }
+}

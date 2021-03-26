@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <title>Гадалкин дом | Редактирование</title>
+</head>
+<body>
+    
+    <header class="header">
+            <div class="header__logo">
+                <img src="assets/img/logo.png" alt="" class="header__img">
+            </div>
+            
+            <nav class="nav header__nav">
+                <a href="#" class="nav__link nav__link-active">Гороскопы</a>
+                <a href="#" class="nav__link">Лунный</a>
+                <a href="#" class="nav__link">Совместимость</a>
+            </nav>
+    </header>
+    
+    <main class="main">
+        
+        <div class="main__content horoscope main__content-active">
+            <div class="horoscope__nav">                
+                <a href="#" class="horoscope__link horoscope__link-active">День</a>
+                <a href="#" class="horoscope__link">Неделя</a>
+                <a href="#" class="horoscope__link">Месяц</a>
+            </div>
+            
+            <div class="horoscope__content horoscope__content-active">
+                <table class="table" border="1" width="100%">
+                  <tr class="table__row">
+                      <th>Дата</th>
+                      <th colspan="4">Гороскоп</th>
+                  </tr>
+                  <tbody class="table__body table__body-simple-day">
+                                          
+                  </tbody>
+                </table>
+            </div>
+            
+            <div class="horoscope__content">
+                <table class="table" border="1" width="100%">
+                  <tr class="table__row">
+                      <th>Даты</th>
+                      <th colspan="4">Гороскоп</th>
+                  </tr>
+                  <tbody class="table__body table__body-simple-week">
+                                          
+                  </tbody>
+                </table>
+            </div>
+            
+            <div class="horoscope__content">
+                <table class="table" border="1" width="100%">
+                  <tr class="table__row">
+                      <th>Месяц</th>
+                      <th colspan="4">Гороскоп</th>
+                  </tr>
+                  <tbody class="table__body table__body-simple-month">
+                                          
+                  </tbody>
+                   
+                </table>
+            </div>
+            
+            <div class="edit edit-simple">
+                <form class="edit__form edit__form-simple"  id="edit-form-simple">
+                    <select class="edit__format" id="edit__format" onchange="editSimpleFormatChoose()" required>
+                        <option value="day">День</option>
+                        <option value="week">Неделя</option>
+                        <option value="month">Месяц</option>
+                    </select>
+                    <br>
+                    
+                    <input class="edit__format-option edit__format-day display_block" type="date" id="edit__format-day-simple" value="2021-03-25" required>
+                    
+                    <input class="edit__format-option edit__format-week" type="week" id="edit__format-week-simple"
+                       min="2021-W10" required>
+                       
+                    <input class="edit__format-option edit__format-month" type="month" id="edit__format-month-simple"
+                       min="2021-01" value="2021-03" required>
+                    <br>                 
+                    <select class="edit__sign" id="edit__sign-simple" required>
+                        <option value="0">Овен</option>
+                        <option value="1">Телец</option>
+                        <option value="2">Близнецы</option>
+                        <option value="3">Рак</option>
+                        <option value="4">Лев</option>
+                        <option value="5">Дева</option>
+                        <option value="6">Весы</option>
+                        <option value="7">Скорпион</option>
+                        <option value="8">Стрелец</option>
+                        <option value="9">Козерог</option>
+                        <option value="10">Водолей</option>
+                        <option value="11">Рыбы</option>
+                    </select>
+                    <br>                    
+                    <textarea class="edit__textarea" id="edit__textarea-simple" cols="30" rows="10" placeholder="ГОРОСКОП" required></textarea>   
+                    <br>                                       
+                    <a href="/" class="btn btn-a btn-grey">Назад</a>
+                    <button class="btn edit__apply-simple">Сохранить</button> 
+                    <button class="btn edit__change-simple display_none" data-id="null">Сохранить</button> 
+                </form>
+            </div>
+            
+            
+            <button class="btn add__horoscope add__horoscope-simple" onclick="openSimpleEdit()">Добавить</button>
+        </div> <!-- SIMPLE HOROSCOPE END -->
+        
+        <div class="main__content moon">
+            <div class="moon__content">
+               <table class="table" border="1" width="100%">
+                  <tr class="table__row">
+                      <th>Дата</th>
+                      <th colspan="4">Гороскоп</th>
+                  </tr>
+                  <tbody class="table__body table__body-moon">
+                                          
+                  </tbody>
+                </table>
+            </div>
+            
+            <div class="edit edit-moon">
+                <form class="edit__form edit__form-moon"  id="edit-form-moon">
+                    <input class="edit__format-option edit__format-day display_block" type="date" id="edit__format-day-moon" value="2021-03-25" required> 
+                    <br>                 
+                    <select class="edit__sign" id="edit__sign-moon" required>
+                        <option value="0">Овен</option>
+                        <option value="1">Телец</option>
+                        <option value="2">Близнецы</option>
+                        <option value="3">Рак</option>
+                        <option value="4">Лев</option>
+                        <option value="5">Дева</option>
+                        <option value="6">Весы</option>
+                        <option value="7">Скорпион</option>
+                        <option value="8">Стрелец</option>
+                        <option value="9">Козерог</option>
+                        <option value="10">Водолей</option>
+                        <option value="11">Рыбы</option>
+                    </select>
+                    <br>                    
+                    <textarea class="edit__textarea" id="edit__textarea-moon" cols="30" rows="10" placeholder="ГОРОСКОП" required></textarea>   
+                    <br>                                       
+                    <a href="/" class="btn btn-a btn-grey">Назад</a>
+                    <button class="btn edit__apply-moon">Сохранить</button> 
+                    <button class="btn edit__change-moon display_none" data-id="null">Сохранить</button> 
+                </form>
+            </div>
+            
+            <button class="btn add__horoscope add__horoscope-moon" onclick="openMoonEdit()">Добавить</button>
+        </div> <!-- MOON END -->
+        
+        <div class="main__content love" method="post">
+           <form action="#" class="love__form">
+               <select class="love__select" name="firstSign" id="firstSign">
+                <option value="0">Овен</option>
+                <option value="1">Телец</option>
+                <option value="2">Близнецы</option>
+                <option value="3">Рак</option>
+                <option value="4">Лев</option>
+                <option value="5">Дева</option>
+                <option value="6">Весы</option>
+                <option value="7">Скорпион</option>
+                <option value="8">Стрелец</option>
+                <option value="9">Козерог</option>
+                <option value="10">Водолей</option>
+                <option value="11">Рыбы</option>
+            </select>
+            <select class="love__select" name="secondSign" id="secondSign">
+                <option value="0">Овен</option>
+                <option value="1">Телец</option>
+                <option value="2">Близнецы</option>
+                <option value="3">Рак</option>
+                <option value="4">Лев</option>
+                <option value="5">Дева</option>
+                <option value="6">Весы</option>
+                <option value="7">Скорпион</option>
+                <option value="8">Стрелец</option>
+                <option value="9">Козерог</option>
+                <option value="10">Водолей</option>
+                <option value="11">Рыбы</option>
+            </select>
+            <div class="love__content">
+               <div class="love__slider slider">
+                       <label class="slider__label" for="compatLevel">Общий</label><br>
+                        <input class="slider__range" type="range" id="compatLevel" name="slider__love" min="0" max="100" oninput="syncRangeSliders()">
+                        <output class="slider__label" id="compatLevel-text">50%</output>
+                </div>  
+                <div class="love__love">
+                   <div class="love__slider slider">
+                       <label class="slider__label" for="loveLevel">Любовь</label><br>
+                        <input class="slider__range" type="range" id="loveLevel" name="slider__love" min="0" max="100" oninput="syncRangeSliders()">
+                        <output class="slider__label" id="loveLevel-text">50%</output>
+                   </div>  
+                   <textarea class="love__textarea" name="love__textarea" id="loveDescription" cols="30" rows="10" placeholder="ЛЮБОВЬ"></textarea>                  
+                </div>
+                <div class="love__friendship">
+                    <div class="love__slider slider">
+                       <label class="slider__label" for="friendshipLevel">Дружба</label><br>
+                        <input class="slider__range" type="range" id="friendshipLevel" name="slider__love" min="0" max="100" oninput="syncRangeSliders()">
+                        <output class="slider__label" id="friendshipLevel-text">50%</output>
+                   </div>   
+                   <textarea class="love__textarea" name="love__textarea" id="friendshipDescription" cols="30" rows="10" placeholder="ДРУЖБА"></textarea>    
+                </div>
+                <div class="love__marriage">
+                    <div class="love__slider slider">
+                       <label class="slider__label" for="marriageLevel">Брак</label><br>
+                        <input class="slider__range" type="range" id="marriageLevel" name="slider__love" min="0" max="100" oninput="syncRangeSliders()">
+                        <output class="slider__label" id="marriageLevel-text">50%</output>
+                   </div>  
+                   <textarea class="love__textarea" name="love__textarea" id="marriageDescription" cols="30" rows="10" placeholder="ЖВАЧКА"></textarea>     
+                </div>
+                
+            </div>
+            
+            <input class="btn" type="submit" value="Сохранить" onclick="alert('Check')">
+           </form> 
+           
+           
+        </div> <!--  LOVE END -->
+    </main>
+    
+    <script src="assets/js/rem.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/simpleHoroscope.js"></script>
+    <script src="assets/js/moon.js"></script>
+    
+</body>
+</html>

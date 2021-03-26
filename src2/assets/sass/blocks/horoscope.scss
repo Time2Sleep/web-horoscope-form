@@ -1,0 +1,72 @@
+.horoscope{
+    
+    &__nav{
+        margin-bottom: 40rem;
+    }
+    &__link{
+        padding: 20rem;
+        text-decoration: none;
+        
+        &:hover:not(&-active){
+            color: #8a9bc6;            
+        }
+        
+        &-active{            
+            color: #8D4E1F;
+            text-decoration: underline;
+        }
+    }
+    
+    &__content{
+        display: none;
+        width: 100%;
+        
+        &-active{
+            display: block;
+        }
+        
+    }
+}
+
+.moon{
+    
+    &__content{
+        width: 100%;       
+    }
+}
+
+.love{
+    
+    &__select{
+        margin-right: 20rem;
+        font-size: 24rem;
+        padding: 10rem;
+    }
+    
+    &__content{
+        margin-top: 30rem;
+    }
+    
+    &__textarea{
+        margin: 20rem 0 40rem;
+        resize: none;
+        width: 520rem;
+    }
+}
+
+
+.slider{
+    &__label{
+        margin-bottom: 10rem;
+    }
+    
+    &__range{
+        width: 500rem;
+    }
+    
+    &__direct{
+        padding: 10rem;
+        width: 60rem;
+    }
+    
+}

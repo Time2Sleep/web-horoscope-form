@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Гадалкин дом | Совместимость</title>
+</head>
+<body>
+    
+    <header class="header">
+            <div class="header__logo">
+                <img src="assets/img/logo.png" alt="" class="header__img">
+            </div>
+            
+            <nav class="nav header__nav">
+                <a href="index.html" class="nav__link">Гороскопы</a>
+                <a href="love.html" class="nav__link nav__link-active">Совместимость</a>
+            </nav>
+    </header>
+    
+       <main class="main">
+        <div class="main__content love">
+           <form action="#" class="love__form">
+               <select class="love__select" name="firstSign" id="firstSign">
+                <option value="0">Овен</option>
+                <option value="1">Телец</option>
+                <option value="2">Близнецы</option>
+                <option value="3">Рак</option>
+                <option value="4">Лев</option>
+                <option value="5">Дева</option>
+                <option value="6">Весы</option>
+                <option value="7">Скорпион</option>
+                <option value="8">Стрелец</option>
+                <option value="9">Козерог</option>
+                <option value="10">Водолей</option>
+                <option value="11">Рыбы</option>
+            </select>
+            <select class="love__select" name="secondSign" id="secondSign">
+                <option value="0">Овен</option>
+                <option value="1">Телец</option>
+                <option value="2">Близнецы</option>
+                <option value="3">Рак</option>
+                <option value="4">Лев</option>
+                <option value="5">Дева</option>
+                <option value="6">Весы</option>
+                <option value="7">Скорпион</option>
+                <option value="8">Стрелец</option>
+                <option value="9">Козерог</option>
+                <option value="10">Водолей</option>
+                <option value="11">Рыбы</option>
+            </select>
+            <div class="love__content">
+               <div class="love__slider slider">
+                       <label class="slider__label" for="compatLevel">Общий</label><br>
+                        <input class="slider__range" type="range" id="compatLevel" name="slider__love" min="0" max="100" oninput="syncRangeSliders()">
+                        <output class="slider__label" id="compatLevel-text">50%</output>
+                </div>  
+                <div class="love__love">
+                   <div class="love__slider slider">
+                       <label class="slider__label" for="loveLevel">Любовь</label><br>
+                        <input class="slider__range" type="range" id="loveLevel" name="slider__love" min="0" max="100" oninput="syncRangeSliders()">
+                        <output class="slider__label" id="loveLevel-text">50%</output>
+                   </div>  
+                   <textarea class="love__textarea" name="love__textarea" id="loveDescription" cols="30" rows="10" placeholder="ЛЮБОВЬ"></textarea>                  
+                </div>
+                <div class="love__friendship">
+                    <div class="love__slider slider">
+                       <label class="slider__label" for="friendshipLevel">Дружба</label><br>
+                        <input class="slider__range" type="range" id="friendshipLevel" name="slider__love" min="0" max="100" oninput="syncRangeSliders()">
+                        <output class="slider__label" id="friendshipLevel-text">50%</output>
+                   </div>   
+                   <textarea class="love__textarea" name="love__textarea" id="friendshipDescription" cols="30" rows="10" placeholder="ДРУЖБА"></textarea>    
+                </div>
+                <div class="love__marriage">
+                    <div class="love__slider slider">
+                       <label class="slider__label" for="marriageLevel">Брак</label><br>
+                        <input class="slider__range" type="range" id="marriageLevel" name="slider__love" min="0" max="100" oninput="syncRangeSliders()">
+                        <output class="slider__label" id="marriageLevel-text">50%</output>
+                   </div>  
+                   <textarea class="love__textarea" name="love__textarea" id="marriageDescription" cols="30" rows="10" placeholder="ЖВАЧКА"></textarea>     
+                </div>
+                
+            </div>
+            
+            <input class="btn" type="submit" value="Сохранить" onclick="alert('Check')">
+           </form> 
+           
+           
+        </div> <!--  LOVE END -->
+    </main>
+    
+    <script src="assets/js/app.js"></script>
+    
+</body>
+</html>

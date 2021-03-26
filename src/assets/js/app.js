@@ -1,24 +1,7 @@
 
-let navLinks = document.querySelectorAll('.nav__link');
-let contents = document.querySelectorAll('.main__content');
+//= rem.js
+//= navigation.js
 
-navLinks.forEach(function callback(link, index) {
-    link.addEventListener('click', function(){
-       changeTab(index); 
-    });
-});
-
-function changeTab(id){
-    navLinks.forEach(function callback(link, index){
-        link.classList.remove("nav__link-active");
-    });
-    contents.forEach(function callback(content, index){
-        content.classList.remove("main__content-active");
-    });
-    
-    navLinks[id].classList.add("nav__link-active");
-    contents[id].classList.add("main__content-active");
-}
 
 
 function syncRangeSliders(){

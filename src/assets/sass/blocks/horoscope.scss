@@ -1,72 +1,76 @@
 .horoscope{
-    
     &__nav{
-        margin-bottom: 40rem;
-    }
-    &__link{
-        padding: 20rem;
-        text-decoration: none;
-        
-        &:hover:not(&-active){
-            color: #8a9bc6;            
-        }
-        
-        &-active{            
-            color: #8D4E1F;
-            text-decoration: underline;
-        }
+        margin-bottom: 20rem;
     }
     
-    &__content{
-        display: none;
-        width: 100%;
+    &__link{
+        padding-right: 20rem;
+        text-decoration: none;
+        font-size: 24rem;
+        color: $basecolor;
         
         &-active{
-            display: block;
+            color: $secondcolor;
+        }
+    }
+}
+
+.calendar{
+    width:805rem;
+    
+    &__day{
+        display: block;
+        margin: 2rem;
+        width: 13%;
+        height: 100rem;
+        padding: 10rem;
+        border-radius: 10rem;
+        
+        text-decoration: none;
+        color: $basecolor;
+        
+        background: #e3e3e3;
+        transition: background 0.2s linear;
+        
+        &-green{
+            background: #66af59;  
+            color: white;
         }
         
+        &:hover{
+            background: #f2f2f2; 
+        }
     }
-}
-
-.moon{
     
-    &__content{
-        width: 100%;       
+    &__month{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        
+        &-name{
+            margin: 20rem;
+        }
     }
-}
-
-.love{
     
-    &__select{
-        margin-right: 20rem;
-        font-size: 24rem;
+    &__year-name{
+        font-size: 24rem
+    }
+    
+    &__month-picker{
+        margin: 40rem auto;
+        text-align: center;
+        font-size: 32rem;
+    }
+    
+    &__btn{
+        cursor: pointer;
         padding: 10rem;
+        background: #f2f2f2;
+        border-radius: 5rem;
+        font-weight: bold;
+        color: $secondcolor;
     }
     
-    &__content{
-        margin-top: 30rem;
-    }
     
-    &__textarea{
-        margin: 20rem 0 40rem;
-        resize: none;
-        width: 520rem;
-    }
-}
-
-
-.slider{
-    &__label{
-        margin-bottom: 10rem;
-    }
-    
-    &__range{
-        width: 500rem;
-    }
-    
-    &__direct{
-        padding: 10rem;
-        width: 60rem;
-    }
     
 }

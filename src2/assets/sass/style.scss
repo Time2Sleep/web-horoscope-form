@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
-$basecolor: #242F4B;
-$secondcolor: #8D4E1F;
-
-
 
 body {
     margin: 0;
@@ -14,7 +10,10 @@ body {
     box-sizing: border-box;
 }
 
-
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/horoscope";
+@import "blocks/edit";
 
 
 .display_block{
@@ -25,11 +24,3 @@ body {
     display: none;
 }
 
-
-
-
-
-@import "blocks/header";
-@import "blocks/main";
-@import "blocks/horoscope";
-@import "blocks/form";

@@ -1,24 +1,45 @@
 
-let navLinks = document.querySelectorAll('.nav__link');
-let contents = document.querySelectorAll('.main__content');
 
-navLinks.forEach(function callback(link, index) {
-    link.addEventListener('click', function(){
-       changeTab(index); 
-    });
-});
+function onRem() {
+    let width = document.documentElement.clientWidth;
+    switch (true) {
+        case (width > 650):
+            document.documentElement.style.fontSize = width / 1920 + 'px';
+            break;
+        case (width < 650):
+            document.documentElement.style.fontSize = width / 320 + 'px';
+            break;
+    }
+}
 
-function changeTab(id){
-    navLinks.forEach(function callback(link, index){
-        link.classList.remove("nav__link-active");
-    });
-    contents.forEach(function callback(content, index){
-        content.classList.remove("main__content-active");
+window.addEventListener('resize', onRem);
+
+onRem();
+
+let calendar = document.querySelector(".calendar");
+let table = document.querySelector(".table");
+let links = document.querySelectorAll(".horoscope__link");
+
+function openCalendar(link){
+    links.forEach((link) => {
+          link.classList.remove("horoscope__link-active") 
     });
     
-    navLinks[id].classList.add("nav__link-active");
-    contents[id].classList.add("main__content-active");
+    calendar.classList.remove("display_none"); 
+    table.classList.add("display_none"); 
+    link.classList.add("horoscope__link-active");
 }
+
+function openTable(link){ 
+    links.forEach((link) => {
+          link.classList.remove("horoscope__link-active") 
+    });
+                         
+    calendar.classList.add("display_none");  
+    table.classList.remove("display_none"); 
+    link.classList.add("horoscope__link-active"); 
+}
+
 
 
 function syncRangeSliders(){
